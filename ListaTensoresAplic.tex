@@ -1,0 +1,198 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+%\hyphenpenalty = 10000
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\maketitle
+%capa - fim
+
+\newpage
+%\pagestyle{empty}
+%\begin{center}
+%\par   
+%\end{center}
+%\newpage
+
+%\pagestyle{plain}
+%\pagenumbering{roman}
+
+
+%\pagenumbering{arabic}
+%\tableofcontents
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Aplicações de Tensores - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+%
+\noindent {\bf {Questão 01 - Espaço-Tempo de Minkowski}}
+
+\indent \par Na elaboração de sua teoria da Relatividade, Einstein utilizou o conceito de espaço-tempo, unificando tempo e espaço em características semelhantes. Isto se deu ao incluir uma nova dimensão através da coordenada $x^{0}=ct$, onde $c$ é a velocidade da luz. Devido à maleabilidade da Álgebra Linear, pode-se incluir esta nova coordenada diretamente ao vetor posição, agora um 4-vetor, $\vec{r}= (ct,x,y,z)$. Porém, as componentes da métrica deste espaço-tempo 4-dimensional não são as de um espaço euclidiano, mas de um espaço dito pseudoeuclidiano e descritas por 
+%
+\begin{eqnarray}
+  \nonumber
+  \eta_{\mu \nu}=\eta^{\mu \nu} \Rightarrow  
+  \begin{pmatrix}
+ -1 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 0 \\
+ 0 & 0 & 1 & 0 \\
+ 0 & 0 & 0 & 1  
+\end{pmatrix}~.
+%
+ \end{eqnarray}
+%
+\noindent Tal métrica é dita métrica de Minkowski. {\it{OBS: A partir de agora, índices gregos representam objetos 4-dimensionais, com $\mu,\nu, \alpha,... = 0,1,2,3$. Índices latinos continuarão a representar as componentes 3-dimensionais, com $i,j,k,... = 1,2,3$.}} 
+%
+\begin{itemize}
+ \item[a)] Sabendo que as componentes contravariantes do 4-vetor posição, como visto acima, são dadas por $x^{\mu}=(ct,x,y,z)$, mostre que suas componentes covariantes são dadas por $x_{\mu}=(-ct,x,y,z)$. Qual conclusão você pode chegar com relação à atuação da métrica minkowskiana nas componentes de um 4-vetor?
+ %
+ \item[b)] A característica pseudoeuclidiana do espaço-tempo de Minkowski está na introdução de um sinal negativo na parte temporal da métrica. Mostre esta característica ao provar que
+ %
+ \begin{eqnarray}
+ \nonumber
+ ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2.
+ \end{eqnarray}
+%
+\noindent Escreva o setor espacial ($dx$, $dy$ e $dz$) em coordenadas esféricas e expresse o elemento de linha 4-dimensional completo.
+ %
+ \item[c)] Uma forma comum de se expressar a separação de um espaço-tempo 4-dimensional nas suas partes temporal e espacial está relacionada com o que se conhece na literatura por separação 3+1. Esta separação consiste em quebrar os elementos de acordo com seus índices gregos e latinos. Como exemplo, tem-se que $x^{\mu}=(ct, x^{i})$ e $x_{\mu}=(-ct, x_{i})$. Mostre que isto pode ser feito para a métrica de Minkowski da seguinte forma, 
+ %
+ \begin{eqnarray}
+ \nonumber
+ ds^2 = -c^2 dt^2 + \delta_{ij}dx^{i} dx^{j}.
+ \end{eqnarray}
+ %
+ \noindent Ou seja, o setor espacial da métrica de Minkowski é euclidiano. {\it{OBS: De acordo com o que foi visto em aula, a matriz identidade de Kronecker generalizada possui índices alternados, $\delta_{i}^{j}$. De forma rigorosa, na maior parte dos casos (como na questão sobre fluidos), mantém-se a parte espacial da métrica como $\eta_{ij}$.}}\\  
+ %
+\end{itemize}
+%
+%
+%
+
+\noindent {\bf {Questão 02 - Eletromagnetismo}}
+
+\indent \par O formalismo covariante do Eletromagnetismo consiste em reescrever todas as quantidades físicas da teoria em termos de tensores em um espaço-tempo 4-dimensional. De forma geral, a ideia do formalismo é a de unificar diferentes quantidades em um único objeto. Como exemplos iniciais, temos a 4-corrente e o 4-potencial, dados, respectivamente, por $j^{\mu}=(c\rho, \vec{j})$ e $A^{\mu}=(\phi/c, \vec{A})$, além dos operadores diferenciais $\partial^{\mu}\equiv \left[\frac{1}{c}\frac{\partial}{\partial t},\vec{\nabla}\right]$ e $\partial_{\mu}=\eta_{\mu \nu}\partial^{\nu}=\left[-\frac{1}{c}\frac{\partial}{\partial t},\vec{\nabla}\right]$.
+%
+\begin{itemize}
+ \item[a)] Mostre que as equações $\partial_{\mu}j^{\mu}=0$ e $\partial_{\mu}A^{\mu}=0$ geram, respectivamente, a equação de continuidade e a condição de Lorenz, dadas por 
+ %
+ \begin{eqnarray}
+  \nonumber
+  \frac{\partial \rho}{\partial t}+ \vec{\nabla}\cdot\vec{j}=0  ~~~~\textnormal{e}~~~~  \frac{1}{c^2}\frac{\partial \phi}{\partial t}+ \vec{\nabla}\cdot\vec{A}=0 ~.
+ \end{eqnarray}
+ %
+ \item[b)] Os campos elétrico e magnético também são unificados no tensor de segunda ordem, antissimétrico, $F_{\mu \nu}$, cujas componentes são dadas por 
+ %
+\begin{eqnarray}
+  \nonumber
+  F_{\mu \nu} \Rightarrow  
+  \begin{pmatrix}
+ 0 & -E_{x}/c & -E_{y}/c & -E_{z}/c \\
+ E_{x}/c & 0 & -B_{z} & B_{y} \\
+ E_{y}/c & B_{z} & 0 & -B_{x} \\
+ E_{z}/c & -B_{y} & B_{x} & 0  
+\end{pmatrix}~.
+%
+ \end{eqnarray}
+%
+\noindent Utilizando a métrica de Minkowski para subir e descer índices, calcule, a partir de $F_{\mu\nu}$, as outras formas das componentes do tensor do campo eletromagnético, ou seja, $F^{\mu \nu}$, $F_{\mu}^{~\nu}$ e $F^{\mu}_{~~\nu}$. É possível estabelecer a mesma antissimetria do tensor para os dois últimos casos? Qual a sua conclusão sobre simetrias de objetos com índices em andares diferentes?
+% 
+\item[c)] A relação entre os campos elétrico e magnético e os potenciais escalar e vetor, através do formalismo covariante do Eletromagnetismo, é dada pela seguinte expressão  
+%
+ \begin{eqnarray}
+  \nonumber
+  F_{\mu \nu}=\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}. 
+ \end{eqnarray}
+% 
+ \noindent Mostre que a equação acima estabelece que
+%
+ \begin{eqnarray}
+  \nonumber
+  \vec{E}=\vec{\nabla}\phi - \frac{\partial \vec{A}}{\partial t} ~~~~\textnormal{e}~~~~ \vec{B}=\vec{\nabla}\times \vec{A}. 
+ \end{eqnarray}
+
+\newpage
+\item[d)] Mostre que as seguintes equações tensoriais,
+%
+ \begin{eqnarray}
+  \nonumber
+  \partial_{\mu}F^{\mu \nu} = \mu_0 j^{\nu}  ~~~~\textnormal{e}~~~~  \partial_{\alpha}F_{\beta \gamma} + \partial_{\gamma}F_{\alpha \beta} + \partial_{\beta}F_{\gamma \alpha} = 0, 
+ \end{eqnarray}
+%
+\noindent geram as equações de Maxwell não-homogêneas e homogêneas, respectivamente. {\it{Dica: Para o caso não-homogêneo, escolha $\nu=0$ para obter a primeira equação e $\nu=j$ para obter a segunda. Já, para o caso homogêneo, escolha $\alpha=0$, $\beta=i$ e $\gamma=j$ para obter a terceira equação e $\alpha=i$, $\beta=j$ e $\gamma=k$ para obter a quarta.}}\\
+\end{itemize}
+
+
+\noindent {\bf {Questão 03 - Hidrodinâmica}}
+
+\indent \par O tensor momento-energia estabelece as características internas de um sistema físico, como massa, momento linear, energia, temperatura, densidade, pressão, entre outras. No caso de um fluido, as componentes do tensor momento-energia são dadas por 
+%
+\begin{eqnarray}
+  \nonumber
+  T^{\mu \nu} \Rightarrow  
+  \begin{pmatrix}
+ c^2 \rho & -c\rho v^{i} \\
+ -c\rho v^{j} & \Pi^{ij} 
+\end{pmatrix}~,
+%
+ \end{eqnarray}
+%
+\noindent onde $\rho$ é a densidade de massa do fluido, $v^{i}$ são as componentes tridimensionais do fluido e $\Pi^{ij}$ são as componentes do tensor momento-energia, também chamado na literatura de tensor fluxo. 
+%
+\begin{itemize}
+\item[a)] Mostre que a lei de conservação do tensor momento-energia, $\partial_{\mu} T^{\mu \nu}=0$ leva à equação de continuidade, para $\nu=0$ e, à equação
+%
+\begin{eqnarray}
+  \nonumber
+  \frac{\partial (\rho v^{i})}{\partial t} = -\partial_{j}\Pi^{ij} ~,
+ \end{eqnarray}
+%
+\noindent no caso de $\nu = i$.
+%
+\item[b)] Considere que o tensor fluxo seja dado por 
+%
+\begin{eqnarray}
+  \nonumber
+  \Pi^{ij}=p\eta^{ij} + \rho v^{i}v^{j} - \sigma^{ij} ~,
+ \end{eqnarray}
+%
+\noindent onde $p$ é a pressão do fluido e $\sigma^{ij}$ é o tensor de viscosidade (atrito entre as partes do fluido), dado através de 
+%
+\begin{eqnarray}
+  \nonumber
+  \sigma^{ij}= \tau \left(\eta^{ik}\partial_{k}v^{j} + \eta^{jk}\partial_{k}v^{i} - \frac{2}{3} \eta^{ij}\partial_{l}v^{l}\right) + \xi \eta^{ij}\partial_{l}v^{l} ~.
+ \end{eqnarray}
+%
+\noindent Na equação acima, os coeficientes $\tau$ e $\xi$ são conhecidos na literatura, respectivamente, como primeira e segunda viscosidades. Mostre que, utilizando as expressões acima no resultado do item a) e considerando que os coeficientes de viscosidade são cons-tantes, a equação de Navier-Stokes, 
+%
+\begin{eqnarray}
+  \nonumber
+  \rho \left[ \frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot \vec{\nabla})\vec{v} \right]= -\vec{\nabla}p + \tau\nabla^2 \vec{v} + \left(\xi + \frac{1}{3}\tau\right)\vec{\nabla}(\vec{\nabla}\cdot \vec{v}) ~,
+ \end{eqnarray}
+%
+\noindent é obtida. Como podemos obter a equação de Euler a partir da equação de Navier-Stokes? Um fluido incompressível é caracterizado pelo fato das linhas de campo de velocidades não possuirem expansão (divergência). Como você reduziria a equação de Navier-Stokes para o caso de um fluido incompressível?
+%
+\end{itemize}
+\end{document}

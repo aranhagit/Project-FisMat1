@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+%\hyphenpenalty = 10000
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\titlepic{\includegraphics[height=4.0cm,width=4.0cm]{cbpf.pdf}}
+%\title{\textbf{Emissão de Radiação Gravitacional em Fusões de Buracos Negros: Uma Modelagem Teórica e Computacional
+%no Formalismo Característico}}
+%\author{Rafael Fernandes Aranha}
+
+
+\begin{document}
+
+%\maketitle
+%capa - fim
+
+\newpage
+%\pagestyle{empty}
+%\begin{center}
+%\par   
+%\end{center}
+%\newpage
+
+%\pagestyle{plain}
+%\pagenumbering{roman}
+
+
+%\pagenumbering{arabic}
+%\tableofcontents
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Cálculo Vetorial Integral - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+%
+\noindent {\bf {Questão 01}}
+
+\indent \par Utilizando o teorema de Gauss e de Stokes, com o auxílio da notação indicial, prove as seguintes identidades vetoriais integrais em um espaço tridimensional ($\psi , \phi \in \mathbb{R}$ e $\vec{a} , \vec{b}, \vec{c} \in \mathbb{R}^{3}$):
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+V&=&\frac{1}{3}\oint_{A} \vec{r}\cdot d\vec{A} ~; ~~~~{\small{\textnormal{(Volume tridimensional.)}}} \\
+\nonumber
+\int_{V} \vec{\nabla}\phi ~dV &=& \oint_{A} \phi ~d\vec{A} ~; ~~~~{\small{\textnormal{(Considere um vetor} ~\vec{a}=\phi \vec{c} ~ \textnormal{, com}~ \vec{c} ~\textnormal{constante.)}}}\\
+\nonumber
+\int_{V} \vec{\nabla} \times \vec{b} ~dV &=& \oint_{A} d\vec{A}\times \vec{b} ~; ~~~~{\small{\textnormal{(Considere um vetor} ~\vec{a}=\vec{b}\times \vec{c} ~ \textnormal{, com}~ \vec{c} ~\textnormal{constante.)}}}\\
+\nonumber
+\oint_{A} \phi \vec{\nabla}\psi \cdot d\vec{A}&=&\int_{V} [\phi \nabla^{2}\psi + (\vec{\nabla} \phi)\cdot (\vec{\nabla} \psi)] ~dV ~; ~~~~ {\small{ \textnormal{(Primeira identidade de Green.)} }}\\
+\nonumber
+\oint_{A} (\phi \vec{\nabla}\psi - \psi \vec{\nabla}\phi ) \cdot d\vec{A}&=&\int_{V} (\phi \nabla^{2}\psi - \psi \nabla^{2}\phi) ~dV ~; ~~~~{\small{\textnormal{(Segunda identidade de Green.)}}} \\
+\nonumber
+\int_{A} d\vec{A}\times \vec{\nabla} \phi &=& \oint_{C} \phi ~d\vec{r} ~; ~~~~{\small{\textnormal{(Considere um vetor} ~\vec{a}=\phi \vec{c} ~ \textnormal{, com}~ \vec{c} ~\textnormal{constante.)}}}\\
+\nonumber
+\int_{A} (d\vec{A}\times \vec{\nabla}) \times \vec{b}  &=& \oint_{C} d\vec{r}\times \vec{b} ~; ~~~~{\small{\textnormal{(Considere um vetor} ~\vec{a}=\vec{b}\times \vec{c} ~ \textnormal{, com}~ \vec{c} ~\textnormal{constante.)}}}\\
+\nonumber
+\vec{A} &=& \frac{1}{2} \oint_{C} \vec{r}\times ~d\vec{r} ~. ~~~~{\small{\textnormal{(Área de superfície aberta. Use a equação acima.)}}}
+\end{eqnarray}\\
+
+\noindent {\bf {Questão 02}}
+
+\indent \par Calcule a integral de superfície $\int_{A} \vec{r}\cdot d\vec{A}$, onde $\vec{r}$ é o vetor posição, sobre a parte da superfície $z=a^2 - x^2 - y^2$ na qual $z\geq 0$, através dos seguintes métodos.
+%
+\begin{itemize}
+ \item[a)] Parametrizando a superfície como $x=a\sin \theta \cos \phi$, $y=a\sin \theta \sin \phi$, $z=a^2 \cos^2 \theta$ e       
+ mostrando que
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{r}\cdot d\vec{A} = a^{4}(2 \sin^3 \theta \cos \theta + \cos^3 \theta \sin \theta) ~d\theta ~d\phi.
+\end{eqnarray}
+ \item[b)] Aplique o teorema da divergência considerando o volume limitado pela superfície e o plano $z=0$.
+\end{itemize}
+
+\newpage
+\noindent {\bf {Questão 03}}
+
+\indent \par Demonstre a validade do teorema de Gauss:
+%
+\begin{itemize}
+ \item[a)] ao calcular o fluxo do vetor
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{F}= \frac{\alpha \vec{r}}{(r^2 + a^2)^{3/2}},
+\end{eqnarray}
+\noindent através da superfície esférica $|\vec{r}|=a\sqrt{3}$;
+%
+\item[b)] ao demonstrar que 
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{\nabla} \cdot \vec{F} = \frac{3\alpha a^2}{(r^2 + a^2)^{5/2}}
+\end{eqnarray}
+\noindent e calculando a integral de volume de $\vec{\nabla} \cdot \vec{F}$ sobre o interior da esfera $|\vec{r}|=a\sqrt{3}$. {\it{Dica: utilize a substituição $r=a \tan \beta$ na integral de volume.}}\\
+%
+%
+\end{itemize}
+%
+%\newpage
+\noindent {\bf {Questão 04}}
+
+\indent \par Um campo vetorial de força $\vec{F}$ é definido em coordenadas cartesianas por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{F}= F_{0}\left[ \left( \frac{y^3}{3 a^3} + \frac{y}{a} e^{xy/ a^2} + 1 \right)\hat{i} + \left( \frac{x y^2}{a^3} + \frac{x+y}{a} e^{xy/ a^2}  \right)\hat{j} + \frac{z}{a}e^{xy/ a^2} \hat{k} \right].
+\end{eqnarray}
+%
+\noindent Utilize o teorema de Stokes para calcular 
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\oint_{L} \vec{F}\cdot d\vec{r},
+\end{eqnarray}
+%
+\noindent onde $L$ é o perímetro do retângulo $ABCD$ dado por $A=(0,1,0)$, $B=(1,1,0)$, $C=(1,3,0)$ e $D=(0,3,0)$.\\
+%
+\noindent {\bf {Questão da prova}}
+
+\indent \par Utilizando a notação indicial, prove as seguintes identidades vetoriais diferencias e integrais ($\psi , \phi \in \mathbb{R}$ e $\vec{a} , \vec{b}, \vec{r} \in \mathbb{R}^{3}$):
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{\nabla} \cdot (\vec{a} \times \vec{b}) &=& \vec{b} \cdot (\vec{\nabla} \times \vec{a}) - \vec{a} \cdot (\vec{\nabla} \times \vec{b}) ~;\\
+\nonumber
+\vec{\nabla} \times (\psi\vec{a}) &=& \psi (\vec{\nabla}\times \vec{a}) + (\vec{\nabla}\psi) \times \vec{a} ~;\\
+\nonumber
+\vec{A} &=& \frac{1}{2} \oint_{C} \vec{r}\times ~d\vec{r} ~; ~~~~{\small{\textnormal{(Área de superfície aberta.)}}} ~\\
+\nonumber
+\oint_{A} \phi \vec{\nabla}\psi \cdot d\vec{A}&=&\int_{V} [\phi \nabla^{2}\psi + (\vec{\nabla} \phi)\cdot (\vec{\nabla} \psi)] ~dV ~. ~~~~ {\small{ \textnormal{(Primeira identidade de Green.)} }}\\
+\end{eqnarray}
+%
+%
+%
+\end{document}

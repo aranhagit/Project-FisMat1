@@ -1,0 +1,319 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+%\hyphenpenalty = 10000
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\hyphenation{}
+\hyphenation{as-sin-to-ti-ca-men-te} \hyphenation{for-ma-lis-mo} \hyphenation{gra-vi-ta-cio-nal} \hyphenation{e-ner-gi-a} \hyphenation{ca-rac-te-rís-ti-cas}
+\hyphenation{ca-rac-te-ri-za-ção} \hyphenation{am-bi-gui-da-de} \hyphenation{cons-tan-tes} \hyphenation{con-si-de-rá-vel} \hyphenation{de-no-mi-na-do}
+\hyphenation{con-si-de-ra-ção} \hyphenation{ve-re-fi-ca-ção} \hyphenation{per-pen-di-cu-lar} \hyphenation{des-co-ber-to} \hyphenation{si-mi-la-res}
+\hyphenation{co-nhe-ci-men-to} \hyphenation{e-xem-plo} \hyphenation{le-va-do} \hyphenation{pers-pec-ti-vas} \hyphenation{or-to-go-na-li-da-de}
+\hyphenation{pro-xi-mi-da-de} \hyphenation{e-xa-ta-men-te} \hyphenation{a-zi-mu-tal} \hyphenation{ca-rac-te-rís-ti-co} \hyphenation{pa-râ-me-tros}
+\hyphenation{mi-nhas} \hyphenation{co-li-são} \hyphenation{des-co-nhe-ci-das} \hyphenation{ca-rac-te-rís-ti-ca} \hyphenation{nor-ma-li-za-ção} \hyphenation{Re-la-ti-vi-da-de} 
+\hyphenation{in-te-res-se} \hyphenation{e-xis-ti-ram} \hyphenation{a-cer-ca} \hyphenation{Ro-bin-son-Traut-man} \hyphenation{re-le-van-tes} \hyphenation{e-xis-te}
+\hyphenation{de-sig-na-dos} \hyphenation{de-no-mi-na-dos} \hyphenation{res-pec-ti-va-men-te} \hyphenation{es-pa-lha-men-to} \hyphenation{re-pre-sen-ta-ção}
+\hyphenation{a-xi-al} \hyphenation{gra-vi-ta-cio-nais} \hyphenation{cons-tru-ir} \hyphenation{re-es-cri-ta} \hyphenation{Sch-warz-schild} \hyphenation{re-cí-pro-ca}
+\hyphenation{li-ne-a-ri-da-des} \hyphenation{con-si-de-ran-do} \hyphenation{fron-tal} \hyphenation{si-mu-la-ções} \hyphenation{pseudo-espectral}
+\hyphenation{va-ri-á-veis} \hyphenation{a-pre-sen-ta} \hyphenation{nu-mé-ri-ca} \hyphenation{de-no-mi-na-da} \hyphenation{di-fe-ren-ças} \hyphenation{lo-ca-li-za-da}
+\hyphenation{fi-xa-ção} \hyphenation{va-lo-res} \hyphenation{cor-res-pon-dem} \hyphenation{li-ne-ar} \hyphenation{de-sa-ce-le-ra-ção} \hyphenation{má-xi-ma}
+\hyphenation{cor-res-pon-den-do} \hyphenation{a-pre-sen-ta-da} \hyphenation{di-fe-ren-tes} \hyphenation{de-ve-ri-a} \hyphenation{sa-tis-fa-tó-ri-o}
+\hyphenation{di-fe-ren-ça} \hyphenation{mí-ni-mos} \hyphenation{re-fe-ren-ci-al} \hyphenation{as-sin-tó-ti-co} \hyphenation{a-pro-xi-ma-ção}
+\hyphenation{des-cri-ção} \hyphenation{i-ní-cio} \hyphenation{re-so-lu-ção} \hyphenation{con-fi-gu-ra-ção} \hyphenation{re-co-nhe-ci-men-to} \hyphenation{for-ne-ci-men-to} \hyphenation{vi-si-tas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\titlepic{\includegraphics[height=4.0cm,width=4.0cm]{cbpf.pdf}}
+%\title{\textbf{Emissão de Radiação Gravitacional em Fusões de Buracos Negros: Uma Modelagem Teórica e Computacional
+%no Formalismo Característico}}
+%\author{Rafael Fernandes Aranha}
+
+
+\begin{document}
+
+%\maketitle
+%capa - fim
+
+\newpage
+%\pagestyle{empty}
+%\begin{center}
+%\par   
+%\end{center}
+%\newpage
+
+%\pagestyle{plain}
+%\pagenumbering{roman}
+
+
+%\pagenumbering{arabic}
+%\tableofcontents
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Aplicações de Cálculo Vetorial - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+%
+\noindent {\bf {Questão 01 - Eletrostática}}
+
+\indent \par Segundo a Lei de Coulomb para um conjunto de $n$ cargas $q_{i}$, localizadas em posições $\vec{r}_{i}^{~'}$, com $i=1,2,...,n$, o campo elétrico gerado pela configuração, em uma posição de observação $\vec{r}$, é dada por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{E}(\vec{r}) = \frac{1}{4\pi \epsilon_{0}} \sum_{i=1}^{n} q_{i} \frac{\vec{r}-\vec{r}^{~'}_{i}}{|\vec{r}-\vec{r}_{i}^{~'}|^{3}}.
+\end{eqnarray}
+%
+\noindent onde $\epsilon_{0}$ é a constante de permissividade do vácuo.
+\begin{itemize}
+ \item[a)] Considere que cada carga é um elemento infinitesimal $\Delta q_{i} = \rho(\vec{r}_{i}^{~'}) \Delta V$, onde $\rho(\vec{r}_{i}^{~'})$ é a densidade de cargas medida em $\vec{r}_{i}^{~'}$ e $\Delta V$ é o volume delimitado por cada elemento de carga. Mostre que, no limite do contínuo ($n \rightarrow \infty$),
+ %
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{E}(\vec{r}) = \frac{1}{4\pi \epsilon_{0}} \int_{V'} \rho(\vec{r}^{~'}) \frac{\vec{r}-\vec{r}^{~'}}{|\vec{r}-\vec{r}^{~'}|^{3}} ~dV^{'},
+\end{eqnarray}
+%
+\noindent onde $\vec{r}^{~'}$ é o vetor que localiza a distribuição $\rho(\vec{r}^{~'})$.
+%
+\item[b)] Demonstre, tanto em coordenadas cartesianas quanto em coordenadas esféricas, que
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\frac{\vec{r}-\vec{r}^{~'}}{|\vec{r}-\vec{r}^{~'}|^{3}} = - \vec{\nabla} \left( \frac{1}{|\vec{r}-\vec{r}^{~'}|} \right).
+\end{eqnarray}
+%
+\item[c)] Com isso, mostre que pode-se escrever o campo elétrico como $\vec{E}(\vec{r}) = -\vec{\nabla}\Phi(\vec{r})$, com
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\Phi(\vec{r}) = \frac{1}{4\pi \epsilon_{0}} \int_{V'} \frac{\rho(\vec{r}^{~'})}{|\vec{r}-\vec{r}^{~'}|} ~dV^{'}.\\
+\nonumber
+\end{eqnarray}
+%
+%\item[d)] Por fim, mostre que $\nabla^{2} \Phi(\vec{r})$.
+\end{itemize}
+
+\noindent {\bf {Questão 02 - Eletromagnetismo}}
+
+\indent \par As equações de Maxwell, para o caso de regiões de vácuo e geradas por fontes $\rho(\vec{r})$ e $\vec{J}(\vec{r})$, são dadas por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{\nabla}\cdot \vec{E} &=& \frac{\rho}{\epsilon_{0}} ~; ~~~~~\textnormal{(Lei de Coulomb)}\\
+\nonumber
+\vec{\nabla}\cdot \vec{B} &=& 0 ~; ~~~~~\textnormal{(Ausência de monopólos magnéticos)}\\
+\nonumber
+\vec{\nabla}\times \vec{E} + \frac{\partial \vec{B}}{\partial t} &=& 0 ~; ~~~~~\textnormal{(Lei de Faraday)}\\
+\nonumber
+\vec{\nabla}\times \vec{B} - \epsilon_{0} \mu_{0} \frac{\partial \vec{E}}{\partial t} &=& \mu_{0}\vec{J} ~, ~~~~~\textnormal{(Lei de Ampére-Maxwell)}
+\end{eqnarray}
+%
+\noindent onde $\mu_{0}$ é a constante de permeabilidade do vácuo.
+%
+\begin{itemize}
+ \item[a)] Mostre que as equações homogêneas (sem fonte) implicam que os campos elétrico e magnético devem ser escritos em termos dos potenciais escalar $\Phi$ e vetorial $\vec{A}$ por $\vec{E}=-\vec{\nabla}\Phi- \partial \vec{A}/ \partial t$ e $\vec{B}=\vec{\nabla} \times \vec{A}$.
+ %
+ \item[b)] Mostre que as equações não-homogêneas são descritas, através dos potenciais, por
+ %
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\nabla^{2}\Phi + \frac{\partial}{\partial t} (\vec{\nabla} \cdot \vec{A}) &=& - \frac{\rho}{\epsilon_0} ~~~;\\
+\nonumber
+\nabla^{2}\vec{A} - \frac{1}{c^2} \frac{\partial^2 \vec{A}}{\partial t^2} - \vec{\nabla} \left( \vec{\nabla} \cdot \vec{A} + \frac{1}{c^2} \frac{\partial \Phi}{\partial t}  \right) &=& - \mu_0 \vec{J} ~~~,
+\end{eqnarray}
+%
+\noindent onde $c=1/\sqrt{\epsilon_0 \mu_0}$ é a velocidade da luz no vácuo.
+ %
+ \item[c)] Mostre que, utilizando a condição de Lorenz, $\vec{\nabla} \cdot \vec{A} + c^{-2} \partial \Phi /\partial t=0$, as equações de Maxwell são descritas pelas equações de onda não-homogêneas,
+ %
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\nabla^{2}\Phi - \frac{1}{c^2} \frac{\partial^2 \Phi}{\partial t^2} &=& - \frac{\rho}{\epsilon_0} ~~~;\\
+\nonumber
+\nabla^{2}\vec{A} - \frac{1}{c^2} \frac{\partial^2 \vec{A}}{\partial t^2} &=& - \mu_0 \vec{J} ~~~.\\
+\nonumber
+\end{eqnarray}
+ % 
+\end{itemize}
+
+
+\noindent {\bf {Questão 03 - Gravitação}}
+
+\indent \par Considere o campo gravitacional gerado por uma distribuição de $n$ massas,
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{g}(\vec{r}) = - G \sum_{i=1}^{n} m_{i} \frac{\vec{r}-\vec{r}^{~'}_{i}}{|\vec{r}-\vec{r}_{i}^{~'}|^{3}},
+\end{eqnarray}
+%
+\noindent onde $G$ é a constante da gravitação de Newton e $m_i$ é a massa de cada partícula $i=1,2,...,n$. 
+%
+\begin{itemize}
+ \item[a)] Mostre que, no limite do contínuo (o mesmo que na Questão 01),
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{g}(\vec{r}) = -G \int_{V'} \rho(\vec{r}^{~'}) \frac{\vec{r}-\vec{r}^{~'}}{|\vec{r}-\vec{r}^{~'}|^{3}} ~dV^{'},
+\end{eqnarray}
+%
+\noindent onde $\rho(\vec{r}^{~'})$ é a densidade de massa associada a um volume $V'$.
+%
+\item[b)] Mostre que $\vec{g}=-\vec{\nabla}\Phi$, com 
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\Phi(\vec{r}) = -G \int_{V'} \frac{\rho(\vec{r}^{~'})}{|\vec{r}-\vec{r}^{~'}|} ~dV^{'}.
+\end{eqnarray}
+%
+\item[c)] Considere o caso do movimento orbital entre duas partículas de massas $M$ e $m$ ($M\gg m$). A força gravitacional entre as massas é dada por $\vec{F}=-(GmM/r^{2})\hat{r}$. Segundo a Mecânica Clássica de Newton, existem dois vetores conservados (não variam com relação à variável temporal $t$). O primeiro vetor é o de momento angular total do sistema, aproximadamente dado por 
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{L} \simeq \vec{r} \times \vec{p},       
+\end{eqnarray}
+%
+\noindent onde $\vec{p}=m\vec{v}$ é o momento linear da partícula $m$ ao longo da sua órbita em torno de $M$. Mostre que $d\vec{L}/dt = 0$.
+%
+\item[d)] O segundo vetor é o de Runge-Lenz, dado aproximadamente por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{A} \simeq \vec{p} \times \vec{L} - \frac{Gm^2M}{r}\vec{r}.       
+\end{eqnarray}
+%
+\noindent Mostre que $d\vec{A}/dt = 0$.
+%
+\item[e)] Mostre que, ao projetarmos o vetor de Runge-Lenz ao longo da direção radial que une as duas massas (considerando que o ângulo entre os dois vetores é o mesmo ângulo da órbita), obtém-se que
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\frac{1}{r}= \frac{Gm^2M}{|\vec{L}|^2}\left( 1+\frac{|\vec{A}|}{Gm^2M}\cos\theta \right).       
+\end{eqnarray}
+\noindent Qual a interpretação física que você pode dar ao módulo do vetor de Runge-Lenz?\\
+\end{itemize}
+%
+
+
+%\newpage
+\noindent {\bf {Questão 04 - Fluidos + Gravitação}}
+
+\indent \par De acordo com o que foi abordado em sala de aula, a dinâmica de um fluido não-viscoso (e sem forças externas atuando no mesmo) é dada pela equação de Euler,
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\rho \left[ \frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot \vec{\nabla})\vec{v} \right]= -\vec{\nabla}P,
+\end{eqnarray}
+%
+\noindent onde $P$ é a pressão do fluido e $\rho$ sua densidade de massa.
+%
+\begin{itemize}
+ \item[a)] Mostre que, ao incluirmos a força gravitacional como força externa, a equação de Euler fica 
+%
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\rho \left[ \frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot \vec{\nabla})\vec{v} \right]= -\vec{\nabla}P  -\rho \vec{\nabla}\Phi,
+\end{eqnarray}
+%
+\noindent onde $\Phi$ é o potencial gravitacional.
+%
+\item[b)] Mostre que o potencial gravitacional, associado ao trabalho de se trazer um elemento de massa $\Delta m$ do infinito até uma região de raio $r$, interno a uma distribuição de massa $M(R)$ ($R$ sendo o raio da distribuição), é dado por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\Phi(r)= - \frac{GM(R)}{R} - G \int_{r}^{R} \frac{M(r')}{r'^{2}}  ~ dr'.
+\end{eqnarray}
+%
+\item[c)] Com isso, mostre que, na situação de equilíbrio (primeira Lei de Newton) e adaptado ao sistema de coordenadas esféricas, a equação de Euler de uma distribuição de massa esférica e com apenas dependência radial é descrita por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\frac{dP}{dr} = -\frac{GM(r)\rho (r)}{r^2},
+\end{eqnarray}
+%
+\noindent onde $M(r)$ é a massa total contida na região esférica interna ao elemento de massa considerado. {\it{Dica:}} $d/dx [\int_{a}^{x} f(x')~dx']=f(x)$
+%
+\item[d)] Mostre também que, pela relação de massa e densidade,
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\frac{dM}{dr} = 4\pi r^2 \rho(r).\\
+\nonumber
+\end{eqnarray}
+%
+\end{itemize}
+
+\newpage
+\noindent {\bf {Questão 05 - Fluidos + Eletromagnetismo}}
+
+\indent \par Magnetohidrodinâmica (MHD) é a área da física que unifica a Mecânica dos Fluidos e o Eletromagnetismo. Isto é feito ao considerarmos a inclusão da força de Lorentz, $\vec{F}=\Delta q (\vec{E} + \vec{v} \times \vec{B})$, do lado direito da equação que rege o balanço de forças que atuam sobre o elemento de fluido com massa $\Delta m$ e carga $\Delta q$. Comumente, considera-se uma aproximação de quase neutralidade do fluido, o que negligencia o campo elétrico e a corrente de deslocamento da Lei de Ampére-Maxwell. Levando em conta essa consideração e o fato de que somente o gradiente de pressão, além da força de Lorentz, atuam no elemento do fluido, 
+%
+\begin{itemize}
+ \item[a)] mostre que a equação de Euler da MHD é dada por
+ %
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\rho \left[ \frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot \vec{\nabla})\vec{v} \right]= -\vec{\nabla}P + \frac{1}{\mu_{0}}(\vec{B}\cdot \vec{\nabla})\vec{B} - \frac{1}{2\mu_{0}}\vec{\nabla}|\vec{B}|^{2}.
+\end{eqnarray}
+ %
+ \item[b)] Considere o caso de um fluido magnetizado em equilíbrio. Mostre que a equação de Euler da MHD resulta em
+ %
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{\nabla}\left(P + \frac{1}{2\mu_{0}}|\vec{B}|^{2}\right) = \frac{1}{\mu_{0}}\left(\vec{B}\cdot \vec{\nabla}\right)\vec{B}.
+\end{eqnarray}
+%
+\noindent Qual a interpretação que você pode dar a respeito do termo $|\vec{B}|^{2}/2\mu_{0}$ na equação acima? E para o termo do lado direito da mesma?
+%
+\item[c)] Considere que o fluido magnetizado em equilíbrio é representado por um filamento cilíndrico e que o campo magnético é azimutal (possui somente componente $B_{\theta}$, onde $\theta$ é a variável cilíndrica angular) e somente dependa da variável cilíndrica radial $r$ ($B_{\theta}=B_{\theta}(r)$). Mostre, neste caso, que a equação de Euler da MHD em equilíbrio é dada por
+%
+ \begin{eqnarray}
+%\label{F1}
+\nonumber
+\frac{\partial}{\partial r} \left( P + \frac{B_{\theta}^{2}}{2\mu_0} \right) = - \frac{B_{\theta}^{2}}{\mu_0 r}.
+\end{eqnarray}
+%
+\noindent {\it{Dica: Para tal, utilize a expressão para a componente $j$ de $\left(\vec{B}\cdot \vec{\nabla}\right)\vec{B}$, de acordo com
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\left[\left(\vec{B}\cdot \vec{\nabla}\right)\vec{B}\right]_{j}=\sum_{i=1}^{3} \left \{ \frac{B_i}{h_i}\frac{\partial B_j}{\partial u_i} + \frac{B_i}{h_i h_j} \left( B_j \frac{\partial h_j}{\partial u_i} - B_i \frac{\partial h_i}{\partial u_j} \right) \right \},
+\end{eqnarray}
+%
+\noindent onde $(u_1 , u_2 , u_3 ) = (r, \theta , z)$ são as coordenadas curvilíneas cilíndricas e ($h_1 , h_2 , h_3$) são os seus fatores de escala correspondentes.}}
+\end{itemize}
+%
+%
+\end{document}

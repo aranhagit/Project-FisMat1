@@ -1,0 +1,252 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\newpage
+
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Tensores Cartesianos - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+
+\noindent {\bf {Questão 01}}
+
+\indent \par Use a definição básica de um tensor cartesiano para demonstrar o seguinte.
+%
+\begin{itemize}
+ \item[a)] Que, para qualquer, porém fixo $\phi$,
+%
+ \begin{eqnarray}
+  \nonumber
+  (u_1 , u_2)=(x_1 \cos\phi - x_2 \sin\phi, x_1\sin\phi + x_2\cos\phi)
+ \end{eqnarray}
+%
+\noindent são as componentes de um tensor de primeira ordem em duas dimensões.
+%
+\item[b)] Que 
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{T}}= 
+  \begin{pmatrix}
+ x_{2}^{2} & -x_{1}x_{2} \\
+ -x_{1}x_{2} & x_{1}^{2}  
+\end{pmatrix}
+%
+ \end{eqnarray}
+ %
+ \noindent é um tensor de segunda ordem. {\it{Dica: Utilize uma rotação bidimensional como lei de transformação tanto para as coordenadas $x_i$ quanto para o tensor $T_{ij}$.}}
+ %
+\item[c)] Que, da mesma forma que no item acima,  
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{T}}= 
+  \begin{pmatrix}
+ x_{2}^{2} & x_{1}x_{2} \\
+ x_{1}x_{2} & x_{1}^{2}  
+\end{pmatrix}
+%
+ \end{eqnarray}
+ %
+ \noindent {\it \bf{não}} é um tensor de segunda ordem.\\
+ \end{itemize}
+%
+
+\noindent {\bf {Questão 02}}
+
+\indent \par Dois vetores ${\bf{A}}$ e ${\bf{B}}$ e um tensor de segunda ordem ${\bf{T}}$ são dados, em um determinado sistema de coordenadas, por
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{A}}= 
+  \begin{pmatrix}
+ 1 \\
+ 0 \\
+ 0
+\end{pmatrix}~; ~~~~
+{\bf{B}}= 
+  \begin{pmatrix}
+ 0 \\
+ 1 \\
+ 0 
+\end{pmatrix}~; ~~~~
+{\bf{T}}= 
+  \begin{pmatrix}
+ 2 & \sqrt{3} & 0 \\
+ \sqrt{3} & 4 & 0 \\
+ 0 & 0 & 2
+ 
+\end{pmatrix}~.
+%
+ \end{eqnarray}
+%
+\noindent Em um segundo sistema de coordenadas, obtido a partir do primeiro por uma rotação, ${\bf{A}}$ e ${\bf{B}}$ são dadas por
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{A'}}=\frac{1}{2} 
+  \begin{pmatrix}
+ \sqrt{3} \\
+ 0 \\
+ 1
+\end{pmatrix}~; ~~~~
+{\bf{B'}}=\frac{1}{2} 
+  \begin{pmatrix}
+ -1 \\
+ 0 \\
+ \sqrt{3}
+ \end{pmatrix}~.
+%
+ \end{eqnarray}
+%
+\noindent Encontre as componentes de ${\bf{T}}$ neste novo sistema de coordenadas e determine, com o mínimo de cálculo possível, 
+%
+\begin{eqnarray}
+  \nonumber
+  T_{ij}T_{ji} ~,~~~ T_{ki}T_{jk}T_{ij} ~,~~~ T_{ik}T_{mn}T_{ni}T_{km} ~.
+ \end{eqnarray}\\
+%
+
+\noindent {\bf {Questão 03}}
+
+\indent \par Através das componentes de dois tensores de segunda ordem, ${\bf{B}}$ e ${\bf{C}}$, além da expressão   
+%
+\begin{eqnarray}
+  \nonumber
+  A_{pk}B_{ik}=C_{pi} ~,
+ \end{eqnarray}
+%
+\noindent mostre que $A_{pk}$ formam as componentes de um tensor de segunda ordem ${\bf{A}}$ (Utilize uma rotação como lei de transformação). Esta é a chamada regra do quociente. Utilize-a, juntamente com as componentes do tensor de segunda ordem, $B_{ij}=x_{i}x_{j}$, para demonstrar que
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{A}}= 
+  \begin{pmatrix}
+ y^2 + z^2 - x^2 & -2xy & -2xz \\
+ -2yx & x^2 + z^2 - y^2 & -2yz \\
+ -2zx & -2zy & x^2 + y^2 - z^2
+\end{pmatrix}~
+%
+ \end{eqnarray}
+%
+\noindent forma um tensor de segunda ordem.\\
+%
+
+
+\noindent {\bf {Questão 04}}
+
+\indent \par Seja um tensor cartesiano simétrico e de segunda ordem, cujas componentes são definidas por
+%
+\begin{eqnarray}
+  \nonumber
+  T_{ij}=\delta_{ij} - 3x_{i}x_{j} ~.
+ \end{eqnarray}
+%
+\noindent Calcule as seguintes integrais, cada uma sobre a superfície de uma esfera de raio unitário:
+%
+\begin{eqnarray}
+  \nonumber
+  \int T_{ij} ~dS~;~~~ \int T_{ik}T_{kj} ~dS ~;~~~ \int x_{i}T_{jk} ~dS ~.
+ \end{eqnarray}\\
+%
+
+\noindent {\bf {Questão 05}}
+
+\indent \par Considere dois vetores ortogonais entre si, ${\bf{v}}$ e ${\bf{u}}$. Encontre o valor de $\alpha$ o qual faça 
+%
+\begin{eqnarray}
+  \nonumber
+  P_{ij} = \alpha v_{i}v_{j}~~~~\textnormal{e} ~~~~ Q_{ij}=\delta_{ij}-\alpha v_{i}v_{j}
+ \end{eqnarray}
+%
+\noindent serem, respectivamente, as componentes dos tensores de projeção paralela e ortogonal, com relação a ${\bf{v}}$, ou seja, $P_{ij}v_{j}=v_{i}$, $P_{ij}u_{j}=0$ e $Q_{ij}u_{j}=u_{i}$, $Q_{ij}v_{j}=0$.\\
+
+%
+\newpage
+\noindent {\bf {Questão 06}}
+
+\indent \par As componentes $T_{ijkl}$, de um tensor de quarta ordem, possuem as seguintes propriedades:
+%
+\begin{eqnarray}
+  \nonumber
+  T_{jikl}=-T_{ijkl} ~;~~~ T_{ijlk}=-T_{ijkl}.
+ \end{eqnarray}
+%
+\noindent Com isso é possível construir tais componentes com o auxílio de um outro tensor de segunda ordem ${\bf{K}}$ tal que
+%
+\begin{eqnarray}
+  \nonumber
+  T_{ijkl}=\epsilon_{ijm} \epsilon_{kln}K_{mn}.
+ \end{eqnarray}
+%
+\noindent Assim, mostre que 
+%
+\begin{itemize}
+ \item[a)] as propriedades de $T_{ijkl}$ são satisfeitas utilizando a expressão acima.
+ \item[b)] $T_{ijkl}$ é unicamente determinado e o expresse em termos de deltas de Kronecker, dado que $T_{ijkl}$ é isotrópico e que $T_{ijji}=1$.
+ %\item[c)] $K_{mn}$ é antissimétrico.
+ \item[c)] se $T_{ijkl}$ possui a propriedade adicional
+ %
+\begin{eqnarray}
+  \nonumber
+  T_{klij}=-T_{ijkl},
+ \end{eqnarray}
+%
+\noindent $K_{mn}$ é antissimétrico e $T_{ijkl}$ é composto por apenas três componentes linearmente independentes. Com isso, encontre uma expressão para $T_{ijkl}$ em termos do vetor
+%
+\begin{eqnarray}
+  \nonumber
+  V_{i}=-\frac{1}{4}\epsilon_{jkl}T_{ijkl}.\\
+  \nonumber
+ \end{eqnarray}
+%
+\end{itemize}
+%
+
+
+\noindent {\bf {Questão 07}}
+
+\indent \par Mostre que $T_{ijk}=\lambda \epsilon_{ijk}$ são as únicas componentes possíveis de um tensor cartesiano de terceira ordem isotrópico. Aqui, $\lambda$ é uma função das coordenadas. {\it{Dica: utilize as duas rotações vistas em aula para o caso de um tensor de segunda ordem.}}\\
+%
+
+\noindent {\bf {Questão 08}}
+
+\indent \par Um campo vetorial $~\vec{a}~$ satisfaz $\vec{\nabla}\cdot \vec{a}=0$, dentro de um certo volume $V$, além de que $\vec{a}\cdot \hat{n}=0$ na superfície de contorno $S$ do mesmo. Considerando o teorema da divergência de Gauss, aplicado a um tensor de segunda ordem e cujas componentes são dadas por $T_{ij}=x_{i}a_{j}$, mostre que $\int_{V} \vec{a} ~dV=0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

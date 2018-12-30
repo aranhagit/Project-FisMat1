@@ -1,0 +1,197 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+%\hyphenpenalty = 10000
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\hyphenation{}
+\hyphenation{as-sin-to-ti-ca-men-te} \hyphenation{for-ma-lis-mo} \hyphenation{gra-vi-ta-cio-nal} \hyphenation{e-ner-gi-a} \hyphenation{ca-rac-te-rís-ti-cas}
+\hyphenation{ca-rac-te-ri-za-ção} \hyphenation{am-bi-gui-da-de} \hyphenation{cons-tan-tes} \hyphenation{con-si-de-rá-vel} \hyphenation{de-no-mi-na-do}
+\hyphenation{con-si-de-ra-ção} \hyphenation{ve-re-fi-ca-ção} \hyphenation{per-pen-di-cu-lar} \hyphenation{des-co-ber-to} \hyphenation{si-mi-la-res}
+\hyphenation{co-nhe-ci-men-to} \hyphenation{e-xem-plo} \hyphenation{le-va-do} \hyphenation{pers-pec-ti-vas} \hyphenation{or-to-go-na-li-da-de}
+\hyphenation{pro-xi-mi-da-de} \hyphenation{e-xa-ta-men-te} \hyphenation{a-zi-mu-tal} \hyphenation{ca-rac-te-rís-ti-co} \hyphenation{pa-râ-me-tros}
+\hyphenation{mi-nhas} \hyphenation{co-li-são} \hyphenation{des-co-nhe-ci-das} \hyphenation{ca-rac-te-rís-ti-ca} \hyphenation{nor-ma-li-za-ção} \hyphenation{Re-la-ti-vi-da-de} 
+\hyphenation{in-te-res-se} \hyphenation{e-xis-ti-ram} \hyphenation{a-cer-ca} \hyphenation{Ro-bin-son-Traut-man} \hyphenation{re-le-van-tes} \hyphenation{e-xis-te}
+\hyphenation{de-sig-na-dos} \hyphenation{de-no-mi-na-dos} \hyphenation{res-pec-ti-va-men-te} \hyphenation{es-pa-lha-men-to} \hyphenation{re-pre-sen-ta-ção}
+\hyphenation{a-xi-al} \hyphenation{gra-vi-ta-cio-nais} \hyphenation{cons-tru-ir} \hyphenation{re-es-cri-ta} \hyphenation{Sch-warz-schild} \hyphenation{re-cí-pro-ca}
+\hyphenation{li-ne-a-ri-da-des} \hyphenation{con-si-de-ran-do} \hyphenation{fron-tal} \hyphenation{si-mu-la-ções} \hyphenation{pseudo-espectral}
+\hyphenation{va-ri-á-veis} \hyphenation{a-pre-sen-ta} \hyphenation{nu-mé-ri-ca} \hyphenation{de-no-mi-na-da} \hyphenation{di-fe-ren-ças} \hyphenation{lo-ca-li-za-da}
+\hyphenation{fi-xa-ção} \hyphenation{va-lo-res} \hyphenation{cor-res-pon-dem} \hyphenation{li-ne-ar} \hyphenation{de-sa-ce-le-ra-ção} \hyphenation{má-xi-ma}
+\hyphenation{cor-res-pon-den-do} \hyphenation{a-pre-sen-ta-da} \hyphenation{di-fe-ren-tes} \hyphenation{de-ve-ri-a} \hyphenation{sa-tis-fa-tó-ri-o}
+\hyphenation{di-fe-ren-ça} \hyphenation{mí-ni-mos} \hyphenation{re-fe-ren-ci-al} \hyphenation{as-sin-tó-ti-co} \hyphenation{a-pro-xi-ma-ção}
+\hyphenation{des-cri-ção} \hyphenation{i-ní-cio} \hyphenation{re-so-lu-ção} \hyphenation{con-fi-gu-ra-ção} \hyphenation{re-co-nhe-ci-men-to} \hyphenation{for-ne-ci-men-to} \hyphenation{vi-si-tas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\titlepic{\includegraphics[height=4.0cm,width=4.0cm]{cbpf.pdf}}
+%\title{\textbf{Emissão de Radiação Gravitacional em Fusões de Buracos Negros: Uma Modelagem Teórica e Computacional
+%no Formalismo Característico}}
+%\author{Rafael Fernandes Aranha}
+
+
+\begin{document}
+
+%\maketitle
+%capa - fim
+
+\newpage
+%\pagestyle{empty}
+%\begin{center}
+%\par   
+%\end{center}
+%\newpage
+
+%\pagestyle{plain}
+%\pagenumbering{roman}
+
+
+%\pagenumbering{arabic}
+%\tableofcontents
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Cálculo Vetorial Diferencial - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+%
+\noindent {\bf {Questão 01}}
+
+\indent \par Utilizando a notação indicial, prove as seguintes identidades vetoriais ($\psi , \phi \in \mathbb{R}$ e $\vec{a} , \vec{b} \in \mathbb{R}^{3}$):
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{\nabla}(\psi + \phi) &=& \vec{\nabla}\psi + \vec{\nabla}\phi ~;\\
+\nonumber
+\vec{\nabla} \cdot (\vec{a}+\vec{b}) &=& \vec{\nabla} \cdot \vec{a} + \vec{\nabla} \cdot \vec{b};\\
+\nonumber
+\vec{\nabla} \times (\vec{a}+\vec{b}) &=& \vec{\nabla} \times \vec{a} + \vec{\nabla} \times \vec{b};\\
+\nonumber
+\vec{\nabla}(\psi\phi) &=& \psi \vec{\nabla}\phi + \phi \vec{\nabla}\psi ~;\\
+\nonumber
+\vec{\nabla} (\vec{a} \cdot \vec{b}) &=& \vec{a} \times (\vec{\nabla} \times \vec{b}) + \vec{b} \times (\vec{\nabla} \times \vec{a}) + (\vec{a} \cdot \vec{\nabla}) \vec{b} + (\vec{b} \cdot \vec{\nabla}) \vec{a} ~;\\
+\nonumber
+\vec{\nabla} \cdot (\psi\vec{a}) &=& \psi (\vec{\nabla}\cdot \vec{a}) + \vec{a} \cdot (\vec{\nabla}\psi) ~;\\
+\nonumber
+\vec{\nabla} \cdot (\vec{a} \times \vec{b}) &=& \vec{b} \cdot (\vec{\nabla} \times \vec{a}) - \vec{a} \cdot (\vec{\nabla} \times \vec{b}) ~;\\
+\nonumber
+\vec{\nabla} \times (\psi\vec{a}) &=& \psi (\vec{\nabla}\times \vec{a}) + (\vec{\nabla}\psi) \times \vec{a} ~;\\
+\nonumber
+\vec{\nabla} \times (\vec{a} \times \vec{b}) &=& \vec{a} (\vec{\nabla} \cdot \vec{b}) + (\vec{b} \cdot \vec{\nabla})\vec{a} - 
+\vec{b} (\vec{\nabla} \cdot \vec{a}) - (\vec{a} \cdot \vec{\nabla})\vec{b} ~;\\
+\nonumber
+\vec{\nabla} \times (\vec{\nabla} \psi) &=& 0 ~;\\
+\nonumber
+\vec{\nabla} \cdot (\vec{\nabla} \times \vec{a}) &=& 0 ~.
+\end{eqnarray}
+
+\noindent {\bf {Questão 02}}
+
+\indent \par Prove que, para uma curva $\vec{r}=\vec{r}(s)$, onde $s$ é o comprimento de arco calculado ao longo da curva a partir de um ponto qualquer, o produto triplo
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\left( \frac{d\vec{r}}{ds} \times \frac{d^{2}\vec{r}}{ds^2} \right) \cdot \frac{d^{3}\vec{r}}{ds^3},
+\end{eqnarray}
+%
+\noindent em qualquer ponto, possui o valor $\kappa^2 \tau$, onde $\kappa$ é a curvatura e $\tau$ é a torção no ponto em questão.\\
+
+\noindent {\bf {Questão 03}}
+
+\indent \par Calcule o Laplaciano da função
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\psi(x,y,z)=\frac{zx^2}{x^2 + y^2 + z^2}
+\end{eqnarray}
+%
+\noindent (i) diretamente em coordenadas cartesianas e (ii) em coordenadas esféricas. Verifique que o resultado é o mesmo, independente do sistema de coordenadas. Como você poderia justificar este resultado?
+
+\newpage
+\noindent {\bf {Questão 04}}
+
+\indent \par Coordenadas parabólicas $u, v, \phi$ são definidas em termos das coordenadas cartesianas por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+x=uv \cos \phi, ~~~ y=uv\sin \phi, ~~~ z=\frac{1}{2}(u^2 - v^2).
+\end{eqnarray}
+%
+\noindent Mostre que (i) este sistema de coordenadas é ortogonal; (ii) Mostre também que a componente $u$ do rotacional de um vetor qualquer $\vec{a}$ é dado por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+(\vec{\nabla} \times \vec{a})_{u}=\frac{1}{(u^2 + v^2)^{1/2}} \left( \frac{a_{\phi}}{v} + \frac{\partial a_{\phi}}{\partial v}\right) - \frac{1}{uv} \frac{\partial a_{v}}{\partial \phi}.
+\end{eqnarray}\\
+
+
+\noindent {\bf {Questão 05}}
+
+\indent \par Coordenadas hiperbólicas parabólicas $u, v, \phi$ são definidas em termos das coordenadas cartesianas por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+x=\cosh u \cos v \cos \phi, ~~~ y=\cosh u \cos v \sin \phi, ~~~ z=\sinh u \sin v .
+\end{eqnarray}
+%
+\noindent Calcule os vetores tangentes em um ponto qualquer do espaço, mostre que estes são mutualmente ortogonais e deduza que os fatores de escala associados são dados por
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+h_{u}=h_{v}=(\cosh^2 u - \cos^2 v)^{1/2}; ~~~~~~ h_{\phi}=\cosh u \cos v.
+\end{eqnarray}\\
+
+\noindent {\bf {Questão 06}}
+
+\indent \par Seja um vetor qualquer $\vec{a}$ e um escalar qualquer $\psi$. Calcule, em coordenadas polares esféricas, 
+%
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+x=r \sin \theta \cos \phi, ~~~ y=r \sin \theta \sin \phi, ~~~ z=r \cos \theta ,
+\end{eqnarray}\\
+%
+\noindent (i) $\vec{\nabla} \psi$; $~~$(ii) $\nabla^2 \psi$; $~~$(iii) $\vec{\nabla} \cdot \vec{a}$; $~~$(iv) $\vec{\nabla} \times \vec{a}$; $~~$ (v) $ds^2$; $~~$ (vi) elemento de volume $dV$.\\ 
+
+\newpage
+\noindent {\bf {Questão 07}}
+
+\indent \par Seja o operador de momento angular da mecânica quântica, definido pela relação vetorial $\vec{L}=-i(\vec{r}\times \vec{\nabla})$.  
+%
+\begin{itemize}
+ \item[a)] Mostre que, em coordenadas esféricas,
+\begin{eqnarray}
+%\label{F1}
+\nonumber
+\vec{L} = i\left( \hat{\theta}~\frac{1}{\sin \theta} \frac{\partial}{\partial \phi} - \hat{\phi} ~\frac{\partial}{\partial \theta} \right) .
+\end{eqnarray}
+%
+\item[b)] Escreva $\hat{\theta}$ e $\hat{\phi}$ em termos da base cartesiana e determine as componentes $L_{x}$, $L_{y}$ e $L_{z}$ em termos das coordenadas $\theta$ e $\phi$ e suas derivadas.
+
+
+
+\end{itemize}
+
+
+\end{document}

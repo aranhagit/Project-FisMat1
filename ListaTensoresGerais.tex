@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[textwidth=510pt,margin=2cm]{geometry}
+\linespread{1.2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[cc]{titlepic}
+\usepackage[sc]{mathpazo}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+%\hyphenpenalty = 10000
+\renewcommand{\epigraphwidth}{4.0in}
+\renewcommand{\epigraphrule}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\maketitle
+%capa - fim
+
+\newpage
+%\pagestyle{empty}
+%\begin{center}
+%\par   
+%\end{center}
+%\newpage
+
+%\pagestyle{plain}
+%\pagenumbering{roman}
+
+
+%\pagenumbering{arabic}
+%\tableofcontents
+\noindent {{\bf {UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO}}}\\
+\noindent {{Instituto de Física - Departamento de Física Teórica}}\\
+\noindent {\bf {Lista de exercícios sobre Tensores em Coordenadas Generalizadas - Física Matemática I}}\\
+\noindent {{Prof. Rafael Aranha}}\\
+
+%
+\noindent {\bf {Questão 01}}
+
+\indent \par Obtenha, a partir da definição de métrica, as componentes de $g_{ij}$, em coordenadas esféricas e em um espaço tridimensional. Com isso, obtenha o divergente de um campo vetorial $\vec{v}$, através da expressão geral em termos do determinante da métrica, $g$. Compare o resultado com a expressão do divergente visto para o caso de um sistema de coordenadas ortogonais. Por fim, calcule todos os símbolos de Christoffel do segundo tipo, $\Gamma^{i}_{~jk}$, para este sistema de coordenadas.\\
+%
+
+\noindent {\bf {Questão 02}}
+
+\indent \par Encontre uma expressão para a derivada covariante segunda das componentes covariantes de um campo vetorial $\vec{v}$, ou seja, $\nabla_{j} \nabla_{k} v_{i}$. Mostre que estes formam as componentes de um tensor de terceira ordem. Ao trocar a ordem de derivação e, então, subtrair as duas expressões, mostre que 
+%
+\begin{eqnarray}
+  \nonumber
+  \nabla_{j}\nabla_{k} v_{i} - \nabla_{k}\nabla_{j} v_{i} \equiv R^{l}_{~ijk} ~v_{l} ~,
+ \end{eqnarray}
+%
+\noindent onde $R^{l}_{~ijk}$ são as componentes do tensor de quarta ordem de Riemann, dado por
+%
+\begin{eqnarray}
+  \nonumber
+  R^{l}_{~ijk}\equiv \frac{\partial \Gamma^{l}_{~ik}}{\partial u^{j}} - \frac{\partial \Gamma^{l}_{~ij}}{\partial u^{k}} + \Gamma^{m}_{{~~ik}} ~\Gamma^{l}_{{~mj}} - \Gamma^{m}_{{~~ij}} ~\Gamma^{l}_{{~mk}} ~.
+ \end{eqnarray}
+%
+\noindent Além disso, utilize uma contração do tensor de Riemann com a métrica, a fim de obter o tensor de Riemann $R_{nijk}$ e calcule todas as suas componentes no sistema de coordenadas esféricas. {\it{Dica: para diminuir o número de cálculos, utilize as seguintes simetrias do tensor de Riemann: $R_{nijk}=-R_{injk}$; $~R_{nijk}=-R_{nikj}$; $~R_{jkni}=R_{nijk}$ e $~R_{nijk}+R_{nkij}+R_{njki}=0$}.}\\
+
+
+\noindent {\bf {Questão 03}}
+
+\indent \par Definem-se os símbolos de Christoffel do primeiro tipo através de uma contração com a métrica da seguinte maneira:   
+%
+\begin{eqnarray}
+  \nonumber
+  \Gamma_{ijk}\equiv g_{il}\Gamma^{l}_{~jk} ~.
+ \end{eqnarray}
+%
+\noindent Mostre que estes são dados por
+%
+\begin{eqnarray}
+  \nonumber
+  \Gamma_{ijk}=\frac{1}{2}\left( \partial_{k}g_{ji} + \partial_{j}g_{ki} - \partial_{k}g_{ij} \right) ~.
+ \end{eqnarray}
+%
+\newpage
+\noindent Ao permutar índices, verifique que 
+%
+\begin{eqnarray}
+  \nonumber
+  \partial_{k}g_{ij}=\Gamma_{ijk} + \Gamma_{jik} ~.
+ \end{eqnarray}
+%
+\noindent Usando o fato que $\Gamma^{l}_{~ij}=\Gamma^{l}_{~ji}$, mostre que 
+%
+\begin{eqnarray}
+  \nonumber
+  \nabla_{k} g_{ij}=0 ~,
+ \end{eqnarray}
+%
+\noindent isto é, que a derivada covariante da métrica é identicamente zero em todos os sistemas de coordenadas.\\
+
+
+
+\noindent {\bf {Questão 04}}
+
+\indent \par Mostre que a derivada parcial, $\partial/\partial u^{n}$, de um dado tensor de quinta ordem, ${\bf{T}}$, com componentes $T^{ij}_{~~klm}$, é dada por
+%
+\begin{eqnarray}
+  \nonumber
+  \frac{\partial {\bf{T}}}{\partial{u^{n}}} =\sum_{i,j,k,l,m} \nabla_{n}T^{ij}_{~~klm}~ {\bf{e}}_{i}\otimes{\bf{e}}_{j}\otimes{\bf{e}}^{k}\otimes{\bf{e}}^{l}\otimes{\bf{e}}^{m} ~.
+ \end{eqnarray}
+%
+\noindent Como você construiria um tensor de sexta ordem a partir da expressão acima?\\
+
+\noindent {\bf {Questão 05}}
+
+\indent \par Mostre que ${\bf{\nabla T}}$, dado por
+%
+\begin{eqnarray}
+  \nonumber
+  {\bf{\nabla T}} = \sum_{i,j,k}\nabla_{k}T^{ij}~{\bf{e}}_{i}\otimes{\bf{e}}_{j}\otimes{\bf{e}}^{k}
+ \end{eqnarray}
+%
+\noindent é um tensor de ordem 3. {\it{OBS: para tal, mostre que as componentes de ${\bf{\nabla T}}$ se transformam como as componentes de um tensor de terceira ordem, através das transformações gerais das derivadas parciais e da conexão de Christoffel}}.
+
+
+\end{document}
